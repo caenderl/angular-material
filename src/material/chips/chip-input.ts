@@ -222,6 +222,6 @@ export class MatChipInput implements MatChipTextControl, OnChanges, OnDestroy {
 
   /** Checks whether a keycode is one of the configured separators. */
   private _isSeparatorKey(event: KeyboardEvent) {
-    return !hasModifierKey(event) && new Set(this.separatorKeyCodes).has(event.keyCode);
+    return new Set(this.separatorKeyCodes).has(event.keyCode);
   }
 }
